@@ -13,7 +13,7 @@
 <header>
  <div><h1>台股加權指數 × <span class="nA">9</span> 大全球資產　20 年連動回測儀表板</h1>
  <p>Yahoo Finance 日收盤（<span id="span"></span>）｜任意區間／單一年度即時重算｜日・週・月報酬｜各區塊獨立匯出 CSV／JSON／PNG｜資料更新 <span id="gen"></span>（台北時間）　<span id="dst"></span></p></div>
- <div class="row"><button class="xb all" onclick="exportAll()">📦 一鍵匯出全部數據 (CSV + JSON)</button><button class="xb" id="sa-btn" onclick="exportStandalone()">💾 下載離線單檔版</button><span class="badge">v5 GitHub 前後端版</span></div>
+ <div class="row"><button class="xb all" onclick="exportAll()">📦 一鍵匯出全部數據 (CSV + JSON)</button><a class="xb" href="m/" style="text-decoration:none">📱 手機版</a><button class="xb" id="sa-btn" onclick="exportStandalone()">💾 下載離線單檔版</button><span class="badge">v5 GitHub 前後端版</span></div>
 </header>
 
 <div class="hub">
@@ -77,6 +77,8 @@
 <footer>台股 × 全球資產連動回測儀表板 v5　·　後端 GitHub Actions ＋ 前端 GitHub Pages　·　CSV 含 UTF-8 BOM，可直接用 Excel 開啟</footer>
 </div>
 <div class="tip" id="tip"></div><div class="toast" id="toast"></div>
+<div id="mob" style="display:none;position:fixed;left:10px;right:10px;bottom:10px;z-index:10000;background:#0f172a;border:1px solid #38bdf8;border-radius:12px;padding:12px 14px;color:#e2e8f0;font-size:14px;box-shadow:0 8px 24px #000a">📱 偵測到手機螢幕，建議改用手機版瀏覽。<div style="display:flex;gap:8px;margin-top:8px"><a href="m/" style="flex:1;text-align:center;background:#38bdf8;color:#090d16;font-weight:700;padding:9px;border-radius:9px;text-decoration:none">切換到手機版</a><button onclick="document.getElementById('mob').style.display='none';try{sessionStorage.setItem('nomob','1')}catch(e){}" style="flex:1;background:#1e293b;color:#cbd5e1;border:1px solid #334155;padding:9px;border-radius:9px">留在桌面版</button></div></div>
+<script>try{if(Math.min(screen.width,innerWidth)<760&&!sessionStorage.getItem('nomob'))document.getElementById('mob').style.display='block'}catch(e){}</script>
 <!--LOADER-->
 <script>
 (function(){
