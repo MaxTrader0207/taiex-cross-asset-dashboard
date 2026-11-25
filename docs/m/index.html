@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090d16">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>台股 × 全球資產連動｜手機版</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="m.css">
+</head>
+<body>
+<div class="ld" id="ld"><div class="sp"></div><div id="ldmsg">載入資料中…</div></div>
+
+<header class="top">
+ <div class="tt"><b>台股 × 全球資產連動</b><span id="upd"></span></div>
+ <a class="tl" href="../" title="桌面版">🖥</a>
+</header>
+
+<div class="bar" id="bar">
+ <div class="chips" id="pres"></div>
+ <div class="row2">
+  <div class="seg" id="fq"><button data-f="D">日</button><button data-f="W" class="on">週</button><button data-f="M">月</button></div>
+  <button class="rng" id="rngbtn"><span id="rl"></span> ▾</button>
+ </div>
+</div>
+
+<main>
+ <section class="tab on" id="t-ov"></section>
+ <section class="tab" id="t-ch"></section>
+ <section class="tab" id="t-yr"></section>
+ <section class="tab" id="t-ev"></section>
+ <section class="tab" id="t-sw"></section>
+ <p class="disc">⚠️ 本頁之歷史數據、相關係數與回測僅供研究與教育參考，不構成任何投資建議。過去表現不代表未來，投資人應自負盈虧。</p>
+</main>
+
+<nav class="nav" id="nav">
+ <button data-t="ov" class="on"><i>📊</i>總覽</button>
+ <button data-t="ch"><i>📈</i>走勢</button>
+ <button data-t="yr"><i>🗓</i>年度</button>
+ <button data-t="ev"><i>📰</i>事件</button>
+ <button data-t="sw"><i>🌊</i>波段</button>
+</nav>
+
+<div class="sheet-bg" id="sbg"></div>
+<div class="sheet" id="sheet">
+ <div class="grab"></div>
+ <h3>期間與計算設定</h3>
+ <div class="seg wide" id="mseg"><button data-m="range" class="on">自訂區間</button><button data-m="single">單一年度</button></div>
+ <div id="s-range"><label>起<input type="date" id="s0"></label><label>迄<input type="date" id="s1"></label></div>
+ <div id="s-single" hidden><label>年度<select id="yr"></select></label></div>
+ <label>日資料時差對齊<select id="mode"><option value="smart">智慧對齊（美國盤用前一晚）</option><option value="same">同一日曆日</option><option value="lead">全部用前一交易日</option></select></label>
+ <p class="note">週／月報酬受時差影響小；看匯率建議用週或月。</p>
+ <button class="go" id="apply">套用</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+ function get(u){return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(u+' HTTP '+r.status);return r.json()})}
+ get('../data/meta.json').then(function(meta){
+  var v=encodeURIComponent(meta.generated_iso||meta.generated||Date.now());
+  return Promise.all([get('../data/prices.json?v='+v),get('../data/events.json?v='+v)]).then(function(x){
+   window.META=meta;window.RAW=x[0];window.EVENTS=x[1];
+   var s=document.createElement('script');s.src='m.js?v='+v;s.onerror=function(){document.getElementById('ldmsg').textContent='m.js 載入失敗'};document.body.appendChild(s)})
+ }).catch(function(e){document.querySelector('#ld .sp').style.display='none';document.getElementById('ldmsg').innerHTML='資料載入失敗：'+e.message+'<br><br>請稍後重新整理。'})
+})();
+</script>
+</body>
+</html>
