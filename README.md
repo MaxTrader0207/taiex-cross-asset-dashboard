@@ -22,7 +22,8 @@
 | `config/assets.json` | 商品清單（Yahoo 代號、名稱、顏色、是否美國時段、是否殖利率、說明）。**增刪商品只要改這裡** |
 | `backend/fetch_data.py` | 後端腳本：抓資料 → 清理 → 輸出 `docs/data/prices.json`、`docs/data/meta.json` |
 | `docs/data/events.json` | 年度總經主軸、事件日、事件期間卡片（手動維護，前端直接讀） |
-| `docs/index.html` `docs/js/app.js` `docs/css/style.css` | 前端 |
+| `docs/index.html` `docs/js/app.js` `docs/css/style.css` | 前端（桌面版） |
+| `docs/m/` | 前端（手機版），與桌面版共用 `docs/data/` |
 | `.github/workflows/update-data.yml` | 排程：台北 05:47（美股收盤後）與 15:17（台股收盤後），可手動或外部觸發 |
 | `tools/cloudflare-worker.js` | 選用：用 Cloudflare Worker 準時觸發更新 |
 
@@ -68,6 +69,7 @@ cd docs && python -m http.server     # 開 http://localhost:8000
 
 ## 其他功能
 
+- **手機版**：`https://<帳號>.github.io/<repo>/m/`，底部分頁（總覽／走勢／年度／事件／波段）、可滑動的期間選單、觸控圖表（按住左右滑動看數值與事件）、卡片式清單，不需左右捲動表格。桌面版在小螢幕開啟時會提示切換。
 - 網頁右上「💾 下載離線單檔版」：把目前資料打包成單一 HTML，可離線開啟或寄給別人。
 - 每個區塊都可匯出 CSV（含 UTF-8 BOM，Excel 直接開）、JSON、PNG。
 - 標題列會顯示資料更新時間；若某商品抓取失敗，會標示「沿用舊資料」。
