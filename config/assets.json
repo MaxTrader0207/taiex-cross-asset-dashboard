@@ -1,16 +1,125 @@
 {
-  "_說明": "base 為比較基準（台股加權）；assets 為對照商品，可自由增刪。key 為內部代號（英數），ticker 為 Yahoo Finance 代號。us=1 表示在美國時段收盤（日報酬會用前一晚對台股隔天）；yld=1 表示殖利率類，以「變動點數」計算；focus=1 會出現在 Top10 與事件表欄位；hint 可為 invert（建議反轉右軸）或 norm（建議基期=100）；spike 為剔除錯誤報價的單日跳動門檻。",
+  "_說明": "base 為比較基準（台股加權）；assets 為對照商品，可自由增刪。key 為內部代號（英數），ticker 為 Yahoo Finance 代號。us=1 表示在美國時段收盤（日報酬會用前一晚對台股隔天）；yld=1 表示殖利率類，以「變動點數」計算；focus=1 會出現在 Top10 與事件表欄位；hint 可為 invert（建議反轉右軸）或 norm（建議基期=100）；short 為手機版欄位簡稱（2～4 字）；spike 為剔除錯誤報價的單日跳動門檻。",
   "start": "2005-01-01",
-  "base": {"key": "TWII", "ticker": "^TWII", "name": "台股加權", "spike": 0.11},
+  "base": {
+    "key": "TWII",
+    "ticker": "^TWII",
+    "name": "台股加權",
+    "spike": 0.11
+  },
   "assets": [
-    {"key": "SOX",  "ticker": "^SOX",     "name": "費城半導體",     "code": "SOX",     "us": 1, "focus": 1, "color": "#38bdf8", "spike": 0.20, "desc": "台股最重要的隔夜領先指標。台灣在晶圓代工與 AI 伺服器供應鏈的比重高，長期走勢高度共振。"},
-    {"key": "TSMC", "ticker": "2330.TW",  "name": "台積電 2330",    "code": "2330.TW", "us": 0, "focus": 0, "color": "#ffa657", "spike": 0.11, "hint": "norm", "desc": "台股第一大權值股，權重約三到四成，與加權指數幾乎同步，可視為台股的「本體」。"},
-    {"key": "TSM",  "ticker": "TSM",      "name": "台積電 ADR",     "code": "TSM",     "us": 1, "focus": 1, "color": "#a5d6ff", "spike": 0.25, "desc": "台積電在美掛牌，夜盤反映外資對台股的最新評價，常帶動隔天台股開盤方向。"},
-    {"key": "TWD",  "ticker": "TWD=X",    "name": "美元/台幣",      "code": "USD/TWD", "us": 0, "focus": 1, "color": "#f43f5e", "spike": 0.05, "hint": "invert", "desc": "外資進出溫度計。數字上升＝台幣貶值、外資匯出；下降＝台幣升值、熱錢匯入，多數時期與台股負相關。"},
-    {"key": "DXY",  "ticker": "DX-Y.NYB", "name": "美元指數",       "code": "DXY",     "us": 1, "focus": 1, "color": "#f59e0b", "spike": 0.05, "hint": "invert", "desc": "全球美元流動性閥門。強美元通常壓抑新興市場資金，但美國景氣獨強時可能出現股匯同強的脫鉤。"},
-    {"key": "EUR",  "ticker": "EURUSD=X", "name": "歐元/美元",      "code": "EUR/USD", "us": 1, "focus": 0, "color": "#10b981", "spike": 0.06, "desc": "美元指數最大權重貨幣。歐元走強多代表美元轉弱與全球風險偏好提升。"},
-    {"key": "TNX",  "ticker": "^TNX",     "name": "美10年債殖利率", "code": "US10Y",   "us": 1, "focus": 1, "yld": 1, "color": "#a855f7", "spike": 0.30, "desc": "全球資產折現率錨點（與債券價格反向）。溫和上升常伴隨景氣復甦，急升則壓抑科技股估值。"},
-    {"key": "GOLD", "ticker": "GC=F",     "name": "黃金",           "code": "Gold",    "us": 1, "focus": 0, "color": "#eab308", "spike": 0.12, "desc": "避險與抗通膨資產。長期與台股關係不穩定，在股災與信用危機時常展現逆勢或抗跌特性。"},
-    {"key": "BTC",  "ticker": "BTC-USD",  "name": "比特幣",         "code": "BTC",     "us": 1, "focus": 0, "color": "#f97316", "spike": 0.45, "hint": "norm", "desc": "高彈性的全球流動性風向球。機構化與現貨 ETF 上市後，與科技股、風險資產的連動性提高。"}
+    {
+      "key": "SOX",
+      "ticker": "^SOX",
+      "name": "費城半導體",
+      "code": "SOX",
+      "us": 1,
+      "focus": 1,
+      "color": "#38bdf8",
+      "spike": 0.2,
+      "desc": "台股最重要的隔夜領先指標。台灣在晶圓代工與 AI 伺服器供應鏈的比重高，長期走勢高度共振。",
+      "short": "費半"
+    },
+    {
+      "key": "TSMC",
+      "ticker": "2330.TW",
+      "name": "台積電 2330",
+      "code": "2330.TW",
+      "us": 0,
+      "focus": 0,
+      "color": "#ffa657",
+      "spike": 0.11,
+      "hint": "norm",
+      "desc": "台股第一大權值股，權重約三到四成，與加權指數幾乎同步，可視為台股的「本體」。",
+      "short": "2330"
+    },
+    {
+      "key": "TSM",
+      "ticker": "TSM",
+      "name": "台積電 ADR",
+      "code": "TSM",
+      "us": 1,
+      "focus": 1,
+      "color": "#a5d6ff",
+      "spike": 0.25,
+      "desc": "台積電在美掛牌，夜盤反映外資對台股的最新評價，常帶動隔天台股開盤方向。",
+      "short": "ADR"
+    },
+    {
+      "key": "TWD",
+      "ticker": "TWD=X",
+      "name": "美元/台幣",
+      "code": "USD/TWD",
+      "us": 0,
+      "focus": 1,
+      "color": "#f43f5e",
+      "spike": 0.05,
+      "hint": "invert",
+      "desc": "外資進出溫度計。數字上升＝台幣貶值、外資匯出；下降＝台幣升值、熱錢匯入，多數時期與台股負相關。",
+      "short": "美/台"
+    },
+    {
+      "key": "DXY",
+      "ticker": "DX-Y.NYB",
+      "name": "美元指數",
+      "code": "DXY",
+      "us": 1,
+      "focus": 1,
+      "color": "#f59e0b",
+      "spike": 0.05,
+      "hint": "invert",
+      "desc": "全球美元流動性閥門。強美元通常壓抑新興市場資金，但美國景氣獨強時可能出現股匯同強的脫鉤。",
+      "short": "美元"
+    },
+    {
+      "key": "EUR",
+      "ticker": "EURUSD=X",
+      "name": "歐元/美元",
+      "code": "EUR/USD",
+      "us": 1,
+      "focus": 0,
+      "color": "#10b981",
+      "spike": 0.06,
+      "desc": "美元指數最大權重貨幣。歐元走強多代表美元轉弱與全球風險偏好提升。",
+      "short": "歐元"
+    },
+    {
+      "key": "TNX",
+      "ticker": "^TNX",
+      "name": "美10年債殖利率",
+      "code": "US10Y",
+      "us": 1,
+      "focus": 1,
+      "yld": 1,
+      "color": "#a855f7",
+      "spike": 0.3,
+      "desc": "全球資產折現率錨點（與債券價格反向）。溫和上升常伴隨景氣復甦，急升則壓抑科技股估值。",
+      "short": "美債"
+    },
+    {
+      "key": "GOLD",
+      "ticker": "GC=F",
+      "name": "黃金",
+      "code": "Gold",
+      "us": 1,
+      "focus": 0,
+      "color": "#eab308",
+      "spike": 0.12,
+      "desc": "避險與抗通膨資產。長期與台股關係不穩定，在股災與信用危機時常展現逆勢或抗跌特性。",
+      "short": "黃金"
+    },
+    {
+      "key": "BTC",
+      "ticker": "BTC-USD",
+      "name": "比特幣",
+      "code": "BTC",
+      "us": 1,
+      "focus": 0,
+      "color": "#f97316",
+      "spike": 0.45,
+      "hint": "norm",
+      "desc": "高彈性的全球流動性風向球。機構化與現貨 ETF 上市後，與科技股、風險資產的連動性提高。",
+      "short": "BTC"
+    }
   ]
 }
