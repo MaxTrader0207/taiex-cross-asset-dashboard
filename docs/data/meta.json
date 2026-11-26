@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-26 11:48",
- "generated_iso": "2026-11-26T11:48:07+08:00",
+ "generated": "2026-11-27 01:42",
+ "generated_iso": "2026-11-27T01:42:05+08:00",
  "source": "Yahoo Finance (yfinance, auto_adjust=True)",
  "base": {
   "key": "TWII",
@@ -127,10 +127,10 @@
   "TWII": {
    "ticker": "^TWII",
    "status": "ok",
-   "rows": 5358,
+   "rows": 5357,
    "first": "2005-01-03",
-   "last": "2026-11-26",
-   "last_close": 38997.94921875,
+   "last": "2026-11-25",
+   "last_close": 38195.4296875,
    "removed": []
   },
   "SOX": {
@@ -139,15 +139,15 @@
    "rows": 5510,
    "first": "2005-01-03",
    "last": "2026-11-25",
-   "last_close": 8774.8623046875,
+   "last_close": 8774.8603515625,
    "removed": []
   },
   "TSMC": {
    "ticker": "2330.TW",
    "status": "ok",
-   "rows": 5383,
+   "rows": 5382,
    "first": "2005-01-03",
-   "last": "2026-11-26",
+   "last": "2026-11-25",
    "last_close": 2150.0,
    "removed": []
   },
@@ -166,7 +166,7 @@
    "rows": 5322,
    "first": "2006-05-16",
    "last": "2026-11-26",
-   "last_close": 32.96799850463867,
+   "last_close": 32.93000030517578,
    "removed": [
     "2011-10-25:1.8015",
     "2014-12-31:3.67"
@@ -175,10 +175,10 @@
   "DXY": {
    "ticker": "DX-Y.NYB",
    "status": "ok",
-   "rows": 5516,
+   "rows": 5517,
    "first": "2005-01-03",
-   "last": "2026-11-25",
-   "last_close": 103.81900024414062,
+   "last": "2026-11-26",
+   "last_close": 103.7760009765625,
    "removed": []
   },
   "EUR": {
@@ -187,7 +187,7 @@
    "rows": 5677,
    "first": "2005-01-03",
    "last": "2026-11-26",
-   "last_close": 1.0961307287216187,
+   "last_close": 1.0973334312438965,
    "removed": [
     "2008-01-08:1.5571",
     "2008-02-08:1.5571",
@@ -207,19 +207,19 @@
   "GOLD": {
    "ticker": "GC=F",
    "status": "ok",
-   "rows": 5506,
+   "rows": 5507,
    "first": "2005-01-03",
-   "last": "2026-11-25",
-   "last_close": 3604.60009765625,
+   "last": "2026-11-26",
+   "last_close": 3595.0,
    "removed": []
   },
   "BTC": {
    "ticker": "BTC-USD",
    "status": "ok",
-   "rows": 4453,
+   "rows": 4454,
    "first": "2014-09-17",
    "last": "2026-11-26",
-   "last_close": 60733.01171875,
+   "last_close": 60335.62109375,
    "removed": []
   }
  }
