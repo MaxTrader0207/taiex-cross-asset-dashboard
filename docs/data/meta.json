@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-27 11:48",
- "generated_iso": "2026-11-27T11:48:15+08:00",
+ "generated": "2026-11-28 01:26",
+ "generated_iso": "2026-11-28T01:26:56+08:00",
  "source": "Yahoo Finance (yfinance, auto_adjust=True)",
  "base": {
   "key": "TWII",
@@ -127,37 +127,37 @@
   "TWII": {
    "ticker": "^TWII",
    "status": "ok",
-   "rows": 5359,
+   "rows": 5358,
    "first": "2005-01-03",
-   "last": "2026-11-27",
-   "last_close": 39340.76953125,
+   "last": "2026-11-26",
+   "last_close": 39151.80859375,
    "removed": []
   },
   "SOX": {
    "ticker": "^SOX",
    "status": "ok",
-   "rows": 5510,
+   "rows": 5511,
    "first": "2005-01-03",
-   "last": "2026-11-25",
-   "last_close": 8774.8603515625,
+   "last": "2026-11-27",
+   "last_close": 9059.6103515625,
    "removed": []
   },
   "TSMC": {
    "ticker": "2330.TW",
    "status": "ok",
-   "rows": 5384,
+   "rows": 5383,
    "first": "2005-01-03",
-   "last": "2026-11-27",
-   "last_close": 2170.0,
+   "last": "2026-11-26",
+   "last_close": 2145.0,
    "removed": []
   },
   "TSM": {
    "ticker": "TSM",
    "status": "ok",
-   "rows": 5510,
+   "rows": 5511,
    "first": "2005-01-03",
-   "last": "2026-11-25",
-   "last_close": 342.3399963378906,
+   "last": "2026-11-27",
+   "last_close": 351.56500244140625,
    "removed": []
   },
   "TWD": {
@@ -166,7 +166,7 @@
    "rows": 5323,
    "first": "2006-05-16",
    "last": "2026-11-27",
-   "last_close": 32.94300079345703,
+   "last_close": 32.95800018310547,
    "removed": [
     "2011-10-25:1.8015",
     "2014-12-31:3.67"
@@ -177,8 +177,8 @@
    "status": "ok",
    "rows": 5517,
    "first": "2005-01-03",
-   "last": "2026-11-26",
-   "last_close": 103.68199920654297,
+   "last": "2026-11-27",
+   "last_close": 104.01100158691406,
    "removed": []
   },
   "EUR": {
@@ -187,7 +187,7 @@
    "rows": 5678,
    "first": "2005-01-03",
    "last": "2026-11-27",
-   "last_close": 1.0981770753860474,
+   "last_close": 1.0942115783691406,
    "removed": [
     "2008-01-08:1.5571",
     "2008-02-08:1.5571",
@@ -198,10 +198,10 @@
   "TNX": {
    "ticker": "^TNX",
    "status": "ok",
-   "rows": 5505,
+   "rows": 5506,
    "first": "2005-01-03",
-   "last": "2026-11-25",
-   "last_close": 4.8480000495910645,
+   "last": "2026-11-27",
+   "last_close": 4.927999973297119,
    "removed": []
   },
   "GOLD": {
@@ -209,17 +209,17 @@
    "status": "ok",
    "rows": 5507,
    "first": "2005-01-03",
-   "last": "2026-11-26",
-   "last_close": 3654.10009765625,
+   "last": "2026-11-27",
+   "last_close": 3658.5,
    "removed": []
   },
   "BTC": {
    "ticker": "BTC-USD",
    "status": "ok",
-   "rows": 4454,
+   "rows": 4455,
    "first": "2014-09-17",
    "last": "2026-11-27",
-   "last_close": 61437.3984375,
+   "last_close": 59559.76953125,
    "removed": []
   }
  }
