@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-27 01:42",
- "generated_iso": "2026-11-27T01:42:05+08:00",
+ "generated": "2026-11-27 11:48",
+ "generated_iso": "2026-11-27T11:48:15+08:00",
  "source": "Yahoo Finance (yfinance, auto_adjust=True)",
  "base": {
   "key": "TWII",
@@ -127,10 +127,10 @@
   "TWII": {
    "ticker": "^TWII",
    "status": "ok",
-   "rows": 5357,
+   "rows": 5359,
    "first": "2005-01-03",
-   "last": "2026-11-25",
-   "last_close": 38195.4296875,
+   "last": "2026-11-27",
+   "last_close": 39340.76953125,
    "removed": []
   },
   "SOX": {
@@ -145,10 +145,10 @@
   "TSMC": {
    "ticker": "2330.TW",
    "status": "ok",
-   "rows": 5382,
+   "rows": 5384,
    "first": "2005-01-03",
-   "last": "2026-11-25",
-   "last_close": 2150.0,
+   "last": "2026-11-27",
+   "last_close": 2170.0,
    "removed": []
   },
   "TSM": {
@@ -163,10 +163,10 @@
   "TWD": {
    "ticker": "TWD=X",
    "status": "ok",
-   "rows": 5322,
+   "rows": 5323,
    "first": "2006-05-16",
-   "last": "2026-11-26",
-   "last_close": 32.93000030517578,
+   "last": "2026-11-27",
+   "last_close": 32.94300079345703,
    "removed": [
     "2011-10-25:1.8015",
     "2014-12-31:3.67"
@@ -178,16 +178,16 @@
    "rows": 5517,
    "first": "2005-01-03",
    "last": "2026-11-26",
-   "last_close": 103.7760009765625,
+   "last_close": 103.68199920654297,
    "removed": []
   },
   "EUR": {
    "ticker": "EURUSD=X",
    "status": "ok",
-   "rows": 5677,
+   "rows": 5678,
    "first": "2005-01-03",
-   "last": "2026-11-26",
-   "last_close": 1.0973334312438965,
+   "last": "2026-11-27",
+   "last_close": 1.0981770753860474,
    "removed": [
     "2008-01-08:1.5571",
     "2008-02-08:1.5571",
@@ -210,7 +210,7 @@
    "rows": 5507,
    "first": "2005-01-03",
    "last": "2026-11-26",
-   "last_close": 3595.0,
+   "last_close": 3654.10009765625,
    "removed": []
   },
   "BTC": {
@@ -218,8 +218,8 @@
    "status": "ok",
    "rows": 4454,
    "first": "2014-09-17",
-   "last": "2026-11-26",
-   "last_close": 60335.62109375,
+   "last": "2026-11-27",
+   "last_close": 61437.3984375,
    "removed": []
   }
  }
